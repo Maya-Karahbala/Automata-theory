@@ -1,0 +1,140 @@
+  <!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>NFA and DFA for (1|0)*00 </title>
+</head>
+
+<body>
+
+    <h2 id=title></h2>
+    <p> check if array numbers binary representation included in (1|0)*00 language</p>
+    <b>Array length = </b>
+    <input id=no type=text value=0
+     onChange="test()" style="width:30px">
+
+     <pre id=out></pre>
+
+    <hr />
+
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0 50px;
+        }
+        th {
+            color: blue;
+            padding: 5px 12px;
+        }
+        td {
+            border: 1px solid blue;
+            padding: 5px 12px;
+            text-align: center;
+        }
+    </style>
+    <br>
+    <b>NFA Non-deterministic finite automation</b>
+    <table > 
+    <tr><th></th><th>0</th><th>1</th></tr>
+    <tr><th> > a</th><td>ab</td><td>a</td></tr>
+    <tr><th>&emsp;b</th><td>c</td><td>ϕ</td></tr>
+    <tr><th>* c</th><td>ϕ</td><td>ϕ</td></tr>
+    </table> 
+     <br>
+     <b>DFA deterministic finite automation</b>
+    <table>
+    <tr><th></th><th>0</th><th>1</th></tr>
+    <tr><th> >  a</th><td>ab</td><td>a</td></tr>
+    <tr><th>&emsp; ab</th><td>abc</td><td>a</td></tr>
+    <tr><th>* abc</th><td>abc</td><td>a</td></tr>
+    </table>
+
+
+
+
+
+    <hr />
+    <pre id=sample></pre>
+
+    <hr />
+
+    <script>
+        "use strict";
+        title.innerText = document.title
+        sample.innerText = 'Non-deterministic Methods\n\n'+deltaNFA+ '\n' + acceptNFA + '\n\n' +'Deterministic Methods\n\n' + deltaDFA + '\n' + acceptDFA
+        function union(a, b) { //set operation using strings
+            let s = a
+            for (let x of b) if (!a.includes(x)) s += x
+            return s
+        }
+        function intersect(a, b) {
+            let s = ''
+            for (let x of b) if (a.includes(x)) s += x
+            return s
+        }
+        function deltaNFA(q, c) { // (1|0)*00
+            if (q=='a' && c=='0') return 'ab'
+            if (q=='a' && c=='1') return 'a'
+            if (q=='b' && c=='0') return 'c' 
+            return '';  //default -- no transition
+        }
+       
+        function acceptNFA(w, F='c', Q='a') {
+            //w: input String
+            //F: final state(s)
+            //Q: current state(s)
+            let i = 0, txt = Q
+            while (i < w.length) {
+                let c = w[i], T=''
+                for (let q of Q) 
+                    T = union(T, deltaNFA(q, c))
+                Q = T
+                if (Q == '') break
+                i++; 
+            }
+            let a= intersect(Q,F).length>0
+            return a ? true:false;
+        }
+         function deltaDFA(q, c) { 
+            if (q=='a' && c=='0') return 'ab'
+            if ((q=='a' || q=='ab' || q=='abc') && c=='1') return 'a'
+            if ((q=='ab' || q=='abc') && c=='0') return 'abc'
+            return '';  //default -- no transition
+        }
+         function acceptDFA(w, F = 'c', q = 'a') {
+            //w: input String
+            //F: final state(s)
+            //q: current state
+            let i = 0, txt = q
+            while (i < w.length) {
+                q = deltaDFA(q, w[i])
+                if (q == '') break
+                i++; txt += " -> " + q
+            }
+          
+            let a=(q!="" &&q.includes(F))
+            return a ? true:false;
+        }
+        function test() {
+            let e = /00$/
+            let s = ""
+            let dfaArr = [], nfaArr = [], regArr = [];
+            for (let n=1; n<no.value; n++) {
+                let w = n.toString(2)  // to binary
+                if (e.test(w)) regArr.push(n);
+                if (acceptDFA(w)) dfaArr.push(n);
+                if (acceptNFA(w)) nfaArr.push(n);
+
+            }
+            out.innerHTML = "Regex: [" + regArr + "]" + '<br>' + "DFA  : [" + dfaArr + "]" + '<br>' + "NFA  : [" + nfaArr + "]"
+        }
+        test()
+          
+    </script>
+</body>
+
+</html>
+
+
