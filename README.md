@@ -1,5 +1,6 @@
 
-  <ol>
+ <h1>Automata theory</h1>
+<ol>
 <h2><li > Classworks</li></h2>
    <ul>
 <li> <a href="https://maya-karahbala.github.io/Automata-theory/Classworks/Cw2.html">CW2</a></li>
