@@ -1,11 +1,4 @@
 
-<html>
-<head>
-    <meta charset="UTF-8">
-   
-</head>
-
-<body>
 
         <h1>Automata theory</h1>
 
@@ -25,8 +18,5 @@
          <ol>
       
 
-</body>
-
-</html>
 
 
