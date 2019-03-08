@@ -2,8 +2,6 @@
 
         <h1>Automata theory</h1>
 
-        <ol>
-
                 <h2><li > Classworks</li></h2>
 
                 <ul>
@@ -15,7 +13,7 @@
                 </ul>
 
                 <h2><li > Homeworks </li></h2>
-         <ol>
+      
       
 
 
