@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Regular Expressions CW3</title>
+    <style>
+    .blue { color: #1A12FC; }
+    .red { color:#FF0000; }
+    #inp {
+      width: 100%;
+      height: 200px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      resize: none;
+  }
+  .explanation{   
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #1B0A5D;
+    color:white;
+    border-radius: 4px;
+}
+</style>
+
+</head>
+
+<body>
+    <h2 id=title></h2>
+
+
+    <p>
+        <p  class=explanation >
+           A simple program that highlight  the strings blue and the arrays red 
+           in the input area that contains code snippet.
+       </p>
+
+       <textarea id=inp onKeyUp="check()">
+        var years = [1950, 1960, 1970, 1980];
+        var vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
+        let longString = "This is a very long string which needs ";
+        let str = ' This is a string ';
+
+    </textarea>
+</p>
+<pre id=out></pre>
+
+
+
+</p>
+
+<script>
+    "use strict";
+    function getIndexes(reg){
+        let indexes=[]
+        const exp =reg
+        let info=[]
+        while(info = exp.exec(inp.value)){
+         for (let j =0; j <info[0].length; j++) {
+             indexes.push(info.index+j);   
+         }
+     }
+     return indexes
+ }
+ function check() {
+    if (inp.value) {   
+       let  res=""
+       let chars=inp.value.split("")
+
+       const arryReg =/\[[^\]]*\]/g
+       const stringReg =/("|')[^("|')]*("|')/g
+
+       let arrayIndexis=getIndexes(arryReg)        
+       let stringIndexis=getIndexes(stringReg)
+       
+       for (var i =0; i <chars.length; i++) {
+         if (stringIndexis.includes(i))
+           res+= "<span class=blue>"+chars[i]+"</span>"
+       else if(arrayIndexis.includes(i))
+           res+= "<span class=red>"+chars[i]+"</span>"
+       else
+          res+= "<span >"+chars[i]+"</span>"
+  }
+  out.innerHTML =res
+  
+}
+} 
+check()
+
+</script>
+
+</body>
+</html>
+
+
