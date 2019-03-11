@@ -77,10 +77,11 @@
        let stringIndexis=getIndexes(stringReg)
        
        for (var i =0; i <chars.length; i++) {
-         if (stringIndexis.includes(i))
-           res+= "<span class=blue>"+chars[i]+"</span>"
-       else if(arrayIndexis.includes(i))
+           if(arrayIndexis.includes(i))
            res+= "<span class=red>"+chars[i]+"</span>"
+         else if (stringIndexis.includes(i))
+           res+= "<span class=blue>"+chars[i]+"</span>"
+       
        else
           res+= "<span >"+chars[i]+"</span>"
   }
