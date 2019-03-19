@@ -6,6 +6,8 @@
 <li> <a href="https://maya-karahbala.github.io/Automata-theory/Classworks/Cw2.html">CW2</a></li>
 
  <li> <a href="https://maya-karahbala.github.io/Automata-theory/Classworks/Cw3.html">CW3</a></li>
+ 
+ <li> <a href="https://maya-karahbala.github.io/Automata-theory/Classworks/Cw4.html">CW4</a></li>
       
   </ul>     
   <h2><li > Homeworks </li></h2>
