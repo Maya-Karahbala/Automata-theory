@@ -1,5 +1,5 @@
 
-<h1>Homeworks and class works given in FSMVÜ Automata-theory cource</h1>
+<h3>Homeworks and class works given in FSMVÜ Automata-theory cource</h3>
 <ol>
 <h2><li > Classworks</li></h2>
    <ul>
