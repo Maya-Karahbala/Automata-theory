@@ -11,7 +11,8 @@ const
     VAR = "var",   IF = "if",     ELSE = "else", FOR = "for", 
     WHILE = "while", RETURN = "return",   READ = "read", 
     PRINT = "print", PRINTLN = "println", TO = "to", 
-    UNKNOWN = '???', EOF = 'eof';
+    UNKNOWN = '???', EOF = 'eof';// FUNC="function";
+
     
 class Token {
   constructor(s, i) {
@@ -19,6 +20,8 @@ class Token {
     this.index = i
     this.kind = Token.getKind(s)
     switch (this.kind)  {
+      //case FUNC:
+      //  this.val = String(s); break
       case LITERAL:  //
         this.val = Token.stripQuotes(s)
         this.index++; break
@@ -41,15 +44,18 @@ class Token {
   }
   static getKind(s) {
     const
-      EXP1 = /".*"/,         //literal
+      
       EXP2 = /^\d+(\.\d+)?/, //number
+      EXP1 = /".*"/,         //literal
       EXP3 = /^[A-Za-z]\w*/, //ident
       EXP4 = /\/.*\//,       //comment
       EXP5 = /==|!=|>=|<=|[%->{}\^]/,  //other symbol
       KEY_STR = [VAR, IF, ELSE, FOR, WHILE, RETURN,
                  READ, PRINT, PRINTLN, TO, EOF];
-    if (s[0] == '"')  //(EXP1.test(s))
-        return LITERAL
+   // if (a.includes(s))
+    //    return FUNC
+     if (s[0] == '"')  //(EXP1.test(s))
+        return LITERAL      
     else if (EXP2.test(s))
         return NUMBER
     else if (EXP3.test(s)) 
