@@ -58,7 +58,11 @@ function accept(w, init='E') {
     }
     input.selectionStart = i
     input.selectionEnd = i+1
-    let a = (i == m && S.length == 0)
+    // if ther is x or y in stack remove them 
+     S=S.filter(word => word!='Y');
+     S=S.filter(word => word!='X');
+    
+    let a = (i == m && S.length == 0 )
     return txt+'  '+(a? "Accept" : "Reject")
 }
 function test() {
