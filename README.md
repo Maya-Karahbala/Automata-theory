@@ -18,6 +18,7 @@
      <ul>
 <li> <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW1.html">HW1</a></li>
    <li> <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW2/Expression.html">HW2</a></li>
+      <li> <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW3/microJ1.html">HW3</a></li>
 
 
       
