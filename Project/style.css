@@ -1,0 +1,273 @@
+/*defaults*/
+header, nav, footer{
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    padding: 0;
+    line-height: 1;
+    margin: 0;
+
+    
+}
+.container{
+    width: 100%;
+    /*split u counted margin */
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+     
+}
+p{
+    font-size: 20px;
+    line-height: 1.2;
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display: table;
+    clear: both;
+    content: "";
+     margin 0;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/*navbar*/
+nav{
+    width: 100%;
+    margin: 0;
+   
+}
+nav ul {
+    background-color:#00262d;
+    overflow: hidden;
+    /*background-color nor shown without setting overflow*/
+    padding: 0;
+    margin: 0;
+}
+
+ul.topnav li{
+    list-style: none;
+    float: left;
+}
+ul.topnav li :hover{
+   background-color: aliceblue;
+    color: black; 
+}
+ul.topnav li.topnav-right{
+    float: right;
+}
+ul.topnav li a{
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    padding: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+ul.topnav li.dropdownicon{
+    display: none;
+}
+
+/*********custom*********/
+#gradient{
+ background-image: linear-gradient(  #00060A,#033741);   
+}
+h2 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.2em;
+   margin: 30px 0 20px; 
+    color: #F7A00A;
+   
+} 
+
+h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+h1.large{
+    color: #fff;
+    font-size: 55px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 500px;
+    height: 90px;
+    margin-left: 0;
+    padding-right: 0;
+    
+}
+h1.med{
+    font-size: 30px;
+    margin-left: 170px;
+    margin-top: 0;
+}
+input[type="text"]{
+    width: 300px;
+    min-width: 100px;
+    padding: 5px;
+    border-radius: 7px;
+}
+form h2{
+    color: #fff;
+}
+div.leftsidecol{
+   width: 50%;
+    margin-left: 20%;
+}
+div.rightsidecol{
+  margin-left: 0%;
+}
+.mehods{
+    margin-top: 20px;
+    width:80%;
+    margin-left: 50px;
+    
+}
+/*section 2*/
+.section2Header{
+  text-align: center;  
+}
+div.box {
+    background-color: #fff;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,.15);
+    padding: 8px;
+    margin-right: 20px;
+     margin-left: 20px;
+     margin-bottom: 20px;
+    height:auto;
+    
+}
+
+.text{
+     margin-left: 20px;
+}
+dİV.col-4{
+    padding: 5px;
+    
+    
+}
+    
+}
+
+.buttonStyle {
+  background-color: #09AB24; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+   margin-top: 1px;
+  border-radius: 7px;
+    width: 100px;
+   
+    
+   
+  
+    
+}
+.buttonStyle:hover{
+    border-style: solid;
+   color: black;   
+     background-color: white; 
+    border-color: #09AB24;
+    border-width: 2px;
+}
+.photoContainer {
+    width:500px;
+    height: 300px
+}
+.col-10{
+    margin-left: 10%;
+}
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+    margin-left: 40px;
+}
+/*mobile*/
+
+@media screen and (max-width: 600px) {
+ul.topnav li:not(:nth-child(1)){
+        display: none;
+    }
+ul.topnav li.dropdownicon{
+display: block;
+float: right;
+    }
+    
+
+ul.topnav.responsive
+li.dropdownicon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+ul.topnav.responsive {
+   position: relative;
+    /*silebiliriz*/
+}
+ul.topnav.responsive li{
+ display: inline;
+ float: none;
+}
+topnav.responsive li a{
+    /*silebiliriz*/
+   display: block;   
+    text-align: left;
+}
+
+div.leftsidecol,
+div.rightsidecol{
+    margin-left: 5%;
+}
+.col-6, .col-4{
+    width: 100%;
+    margin-bottom: 10%;
+    padding: 8px;
+}
+    input[type="text"]{
+    width: 170%;
+        margin 0;
+ 
+}
+    div.photoContainer {
+        position: relative;
+        width: 100%;
+        margin 0;
+        overflow: hidden;
+        
+    } 
+    div.box{
+    
+    height:auto;
+    
+}
+    
+    
+}

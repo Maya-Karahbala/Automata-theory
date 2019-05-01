@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+      <head>
+
+          <title>
+          my first web
+          </title>
+          <link rel="stylesheet" href="style.css">
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+      </head>
+
+      <body>
+
+          <nav >
+               <ul class="topnav" id="dropdownmenu">
+              <li> <a href="#"> home</a> </li>
+              <li> <a href="#"> about Regex</a> </li>
+              <li> <a href="#">rules</a></li>
+             <li> <a href="#"> examples</a> </li>
+                    <li class="topnav-right"> <a href="#"> 
+reference</a> </li>
+
+                   <!-- 
+                    Unicode Character 'TRIGRAM FOR HEAVEN' -->
+                    <li class="dropdownicon"> <a href="javascript:void(0);" onclick="dropdownMenu()"> &#9776;</a> </li>
+
+              </ul>
+          </nav>
+
+          <div class="container" id="gradient">
+              <div class="row">
+                  <div class="col-6">
+                      <div class="leftsidecol">
+                      <h1 class="large"> Regular Expressions</h1>
+                      <h1 class="large med">Automation theory 
+                         <br> term project</h1>
+
+                      </div>
+
+                  </div>
+
+                    <div class="col-6">
+                        <div class="rightsidecol ">
+                       <img src="photos/reg.png" class="photoContainer" >
+                        </div>
+                  </div>
+              </div>
+          </div>
+          <header>
+
+          <!--https://www.cssmatic.com/box-shadow-->
+          <div class="container">
+
+
+              <!-- second line-->
+               <div class="row">
+                  <div class="col-10" >
+                    <div class="box">
+                        <h2><span>What is Regex</span></h2>
+
+                        <p class="text">
+
+                           RegExp Object<br>
+A regular expression is an object that describes a pattern of characters.<br>
+
+Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text.<br>
+                            Creating a regular expression:
+                        </p>
+                       <pre><code>var re = /ab+c/;
+var re = new RegExp('ab+c');  </code></pre>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- next line-->
+                  <div class="row">
+                  <div class="col-10" >
+                    <div class="box">
+                        <h2><span> Regular expressions Methods</span></h2>
+                         <img src="photos/methods.png" class="photoContainer" >
+                      
+                      </div>
+                  </div>
+              </div>
+          </div>
+         <script>
+          function dropdownMenu(){
+              var dropdownmenu1=document.getElementById("dropdownmenu");
+              if(dropdownmenu1.className==="topnav"){
+                  dropdownmenu1.className+=" responsive";
+              }
+              else{
+                 dropdownmenu1.className="topnav" ;
+              }
+          }
+          </script>
+
+
+
+
+      </body>
+</html>
