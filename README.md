@@ -22,7 +22,12 @@
 
 
       
-  </ul>     
+  </ul> 
+  <h2><li > Project</li></h2>
+   <ul>
+<li> <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW1.html">Regex</a></li>
+     
+  </ul> 
 
 
 
