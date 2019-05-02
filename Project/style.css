@@ -231,7 +231,8 @@ pre code {
   background-color: #00262d;
   color: white;
 }
-/*method table*/
+/*-----*/
+
 
 /*mobile*/
 
@@ -264,6 +265,7 @@ topnav.responsive li a{
     /*silebiliriz*/
    display: block;   
     text-align: left;
+     display: block;
 }
 
 div.leftsidecol,
@@ -271,6 +273,7 @@ div.rightsidecol{
     margin-left: 1%;
 }
 .col-6, .col-4{
+    margin-left: 0;
     width: 100%;
     margin-bottom: 10%;
     padding: 8px;
@@ -288,13 +291,17 @@ div.rightsidecol{
         
     } 
     div.box{
-    margin: 0;
     height:auto;
+    margin-left: 0;
     
 }
     .row{
-        margin-left: 0;
+    margin-left: 0;
     }
-    
+    pre code {
+    margin-left: 0;
+}
+ 
+   
     
 }
