@@ -161,31 +161,8 @@ dİV.col-4{
     
 }
 
-.buttonStyle {
-  background-color: #09AB24; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-   margin-top: 1px;
-  border-radius: 7px;
-    width: 100px;
-   
-    
-   
-  
-    
-}
-.buttonStyle:hover{
-    border-style: solid;
-   color: black;   
-     background-color: white; 
-    border-color: #09AB24;
-    border-width: 2px;
-}
+
+
 .photoContainer {
     width:500px;
     height: 300px
@@ -241,6 +218,28 @@ p.HiglitedText {
     margin: 8px 0;
 }
 .found { color: #27D704; }
+.found2 { color: #27D704; }
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 80%;
+    width: 20%;
+border: 2px solid #4CAF50;
+}
+.button:hover {
+  background-color: #0B7813; /* Green */
+ 
+}
 /*-----*/
 
 /*mobile*/
@@ -315,6 +314,11 @@ div.rightsidecol{
     margin-left: 100px;
     
 }
+    .button {
+    font-size: 15px;
+    margin-left: 70%;
+    width: 30%; 
+    }
  
    
     

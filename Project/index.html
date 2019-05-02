@@ -3,7 +3,7 @@
       <head>
 
           <title>
-          my first web
+          Regular Expressions
           </title>
           <link rel="stylesheet" href="style.css">
           <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -142,6 +142,7 @@ matchAll	A String method that returns an iterator containing all of the matches,
              Pattern <input type=text id=pat onKeyUp="checkRE()">
             <p id=testText class="HiglitedText"></p>
             <p id=higlitedText class="HiglitedText"></p>
+            <button type="button" class="button" onclick="setValues()">Next</button>
 
                        
                     
@@ -170,6 +171,7 @@ matchAll	A String method that returns an iterator containing all of the matches,
              
              
 function setValues() {
+         document.getElementById("pat").value="";
         do {
           rand=Math.floor(Math.random() * ptrn.length); 
         } while (selecteddRand.includes(rand));  
@@ -181,10 +183,35 @@ function setValues() {
         document.getElementById("testText").style.borderLeft = "thick solid #0E0E0E";
     
 }
-function checkRE() {   
-        let exp = new RegExp(pat.value,'g');
-        let str = "<span class=found>$&</span>";
+
+//check if pattern match higlited words
+   let found2= document.getElementsByClassName('found2');
+    let found= document.getElementsByClassName('found');
+function chechTexts(){
+ 
+       if(found.length==found2.length && found.length!=0){
+        for(let i=0;i<found.length;i++){
+            console.log(found[i].innerHTML+" "+found2[i].innerHTML)
+            if(found[i].innerHTML!=found2[i].innerHTML){
+                return false;
+            }
+        }
+           return true;
+    }
+    return false;
+}
+function checkRE() {
+    
+            let exp = new RegExp(pat.value,'g'); 
+        let str = "<span class=found2>$&</span>";
         testText.innerHTML = testText.innerText.replace(exp, str);
+     if(chechTexts()){
+         document.getElementById("testText").style.borderLeft = "thick solid #27D704";
+     }
+    else{
+        document.getElementById("testText").style.borderLeft = "thick solid #0E0E0E";
+    }
+   
            
 }
              setValues();
