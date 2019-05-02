@@ -131,6 +131,25 @@ matchAll	A String method that returns an iterator containing all of the matches,
                       </div>
                   </div>
               </div>
+                  <!-- game line-->
+               <div class="row">
+                  <div class="col-10" >
+                    <div class="box">
+                        <h2><span>Regex Game</span></h2>
+                        <p  class=explanation >
+           Your pattern should match the higlited words in text section
+       </p>
+             Pattern <input type=text id=pat onKeyUp="checkRE()">
+            <p id=testText class="HiglitedText"></p>
+            <p id=higlitedText class="HiglitedText"></p>
+
+                       
+                    
+                       
+                     
+                      </div>
+                  </div>
+              </div>
           </div>
          <script>
           function dropdownMenu(){
@@ -142,6 +161,33 @@ matchAll	A String method that returns an iterator containing all of the matches,
                  dropdownmenu1.className="topnav" ;
               }
           }
+             const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","[A-Z][a-z]*","[1-9]*,[1-9]*"];
+            const word = 
+    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+     "Geldim gördüm buldum...", "Excellent expression tax ","Find words starts with Capital Letter ","2,4  Find Double numbers  33  22,33 "];
+             let rand; 
+             let selecteddRand=[]
+             
+             
+function setValues() {
+        do {
+          rand=Math.floor(Math.random() * ptrn.length); 
+        } while (selecteddRand.includes(rand));  
+        selecteddRand.push(rand)
+        let exp = new RegExp(ptrn[rand],'g');
+        let str = "<span class=found>$&</span>";
+        higlitedText.innerHTML = word[rand].replace(exp, str);
+        testText.innerText=word[rand];
+        document.getElementById("testText").style.borderLeft = "thick solid #0E0E0E";
+    
+}
+function checkRE() {   
+        let exp = new RegExp(pat.value,'g');
+        let str = "<span class=found>$&</span>";
+        testText.innerHTML = testText.innerText.replace(exp, str);
+           
+}
+             setValues();
           </script>
 
 

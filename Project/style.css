@@ -123,12 +123,7 @@ h1.med{
     margin-left: 170px;
     margin-top: 0;
 }
-input[type="text"]{
-    width: 300px;
-    min-width: 100px;
-    padding: 5px;
-    border-radius: 7px;
-}
+
 form h2{
     color: #fff;
 }
@@ -224,7 +219,7 @@ pre code {
 
 #mehodsTable tr:hover {background-color: #ddd;}
 
-#mehodsTable th {
+#mehodsTable th ,.explanation {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -232,7 +227,21 @@ pre code {
   color: white;
 }
 /*-----*/
-
+/*Regeex game*/
+input[type="text"]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+p.HiglitedText {
+    border-style: outset;
+    border-left: 5px solid #27D704;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.found { color: #27D704; }
+/*-----*/
 
 /*mobile*/
 
@@ -285,7 +294,7 @@ div.rightsidecol{
 }
     div.photoContainer {
         position: relative;
-        width: 100%;
+        width: 300px;
         margin 0;
         overflow: hidden;
         
@@ -300,6 +309,11 @@ div.rightsidecol{
     }
     pre code {
     margin-left: 0;
+}
+    h1.med{
+    
+    margin-left: 100px;
+    
 }
  
    
