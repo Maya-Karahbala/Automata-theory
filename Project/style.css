@@ -153,7 +153,7 @@ div.box {
 .text{
      margin-left: 20px;
 }
-dİV.col-4{
+diV.col-4{
     padding: 5px;
     
     
@@ -161,11 +161,9 @@ dİV.col-4{
     
 }
 
-
-
-.photoContainer {
-    width:500px;
-    height: 300px
+ div.photoContainer {
+    width:40%;
+    height: 500px
 }
 .col-10{
     margin-left: 10%;
@@ -175,7 +173,7 @@ pre code {
   border: 1px solid #999;
   display: block;
   padding: 20px;
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 
@@ -197,8 +195,8 @@ pre code {
 #mehodsTable tr:hover {background-color: #ddd;}
 
 #mehodsTable th ,.explanation {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px;
+ 
   text-align: left;
   background-color: #00262d;
   color: white;
@@ -209,6 +207,7 @@ input[type="text"]{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
+    border: 2px solid black;
   box-sizing: border-box;
 }
 p.HiglitedText {
@@ -226,7 +225,7 @@ p.HiglitedText {
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+   display: inline; 
   font-size: 20px;
   margin: 4px 2px;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -241,7 +240,17 @@ border: 2px solid #4CAF50;
  
 }
 /*-----*/
-
+/*fınd  words*/
+.add{
+  background-color: #1B1D62; 
+  border: 2px solid #1B1D62;
+    
+}
+.add:hover {
+  background-color: #0E1043; /* Green */
+ 
+}
+/*-----*/
 /*mobile*/
 
 @media screen and (max-width: 600px) {
@@ -252,8 +261,6 @@ ul.topnav li.dropdownicon{
 display: block;
 float: right;
     }
-
-    
 
 ul.topnav.responsive
 li.dropdownicon{
@@ -286,14 +293,10 @@ div.rightsidecol{
     margin-bottom: 10%;
     padding: 8px;
 }
-    input[type="text"]{
-    width: 170%;
-        margin 0;
- 
-}
+
     div.photoContainer {
         position: relative;
-        width: 300px;
+        width: 370px;
         margin 0;
         overflow: hidden;
         
@@ -319,6 +322,7 @@ div.rightsidecol{
     margin-left: 70%;
     width: 30%; 
     }
+   
  
    
     

@@ -41,8 +41,8 @@ reference</a> </li>
                   </div>
 
                     <div class="col-6">
-                        <div class="rightsidecol ">
-                       <img src="photos/reg.png" class="photoContainer" >
+                        <div class="rightsidecol photoContainer">
+                       <img src="photos/reg.png"  >
                         </div>
                   </div>
               </div>
@@ -80,7 +80,7 @@ var re = new RegExp('ab+c');  </code></pre>
                   <div class="row">
                   <div class="col-10" >
                     <div class="box">
-                        <h2><span> Regular expressions Methods</span></h2>
+                        <h2><span> RegEx Methods</span></h2>
                         <table id="mehodsTable">
   <tr>
     <th>Method</th>
@@ -131,11 +131,11 @@ matchAll	A String method that returns an iterator containing all of the matches,
                       </div>
                   </div>
               </div>
-                  <!-- game line-->
+                  <!-- Find pattern-->
                <div class="row">
                   <div class="col-10" >
                     <div class="box">
-                        <h2><span>Regex Game</span></h2>
+                        <h2><span>Find pattern</span></h2>
                         <p  class=explanation >
            Your pattern should match the higlited words in text section
        </p>
@@ -143,6 +143,30 @@ matchAll	A String method that returns an iterator containing all of the matches,
             <p id=testText class="HiglitedText"></p>
             <p id=higlitedText class="HiglitedText"></p>
             <button type="button" class="button" onclick="setValues()">Next</button>
+
+                       
+                    
+                       
+                     
+                      </div>
+                  </div>
+              </div>
+                 <!-- find words line-->
+               <div class="row">
+                  <div class="col-10" >
+                    <div class="box">
+                        <h2><span>Find matching word</span></h2>
+                        <p  class=explanation >
+            higlite  word which much given pattern and press add
+       </p>
+            Pattern <input type=text id=pat2>
+            <p id=allText class="HiglitedText"></p>
+            <p id=words class="HiglitedText"></p>
+            
+                <button type="button" class="button add" onclick="add()">add</button>
+            <button type="button" class="button" onclick="next2()">next</button>
+            
+            
 
                        
                     
@@ -168,10 +192,11 @@ matchAll	A String method that returns an iterator containing all of the matches,
      "Geldim gördüm buldum...", "Excellent expression tax ","Find words starts with Capital Letter ","2,4  Find Double numbers  33  22,33 "];
              let rand; 
              let selecteddRand=[]
-             
+             let selecteddWords=[]
              
 function setValues() {
          document.getElementById("pat").value="";
+    document.getElementById("pat").style.borderColor = "#0E0E0E";
         do {
           rand=Math.floor(Math.random() * ptrn.length); 
         } while (selecteddRand.includes(rand));  
@@ -207,14 +232,42 @@ function checkRE() {
         testText.innerHTML = testText.innerText.replace(exp, str);
      if(chechTexts()){
          document.getElementById("testText").style.borderLeft = "thick solid #27D704";
+         document.getElementById("pat").style.borderColor = "#27D704";
      }
     else{
         document.getElementById("testText").style.borderLeft = "thick solid #0E0E0E";
+        document.getElementById("pat").style.borderColor = "#0E0E0E";
     }
    
            
 }
+function add(){
+    let word=window.getSelection().toString()
+    if(!selecteddWords.includes(word)){
+         selecteddWords.push(word)
+        words.innerHTML=words.innerHTML+"  "+word;
+         console.log(word) 
+    }
+  
+}
+function next2(){
+        selecteddWords=[];
+        do {
+          rand=Math.floor(Math.random() * ptrn.length); 
+        } while (selecteddRand.includes(rand));  
+        selecteddRand.push(rand)
+       
+        let exp = new RegExp(ptrn[rand],'g');
+        pat2.value=ptrn[rand];
+        
+        allText.innerText=word[rand];
+
+}
              setValues();
+             next2();
+             document.getElementById("pat2").readOnly = true;
+             
+             
           </script>
 
 
