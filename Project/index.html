@@ -31,21 +31,17 @@ References</a> </li>
 
           <div class="container" id="gradient">
               <div class="row">
-                  <div class="col-6">
-                      <div class="leftsidecol">
+                  <div class="col-12">
+                      <div >
                       <h1 class="large"> Regular Expressions</h1>
                       <h1 class="large med">Automation theory 
-                         <br> term project</h1>
+                         term project</h1>
 
                       </div>
 
                   </div>
 
-                    <div class="col-6">
-                        <div class="rightsidecol photoContainer">
-                       <img src="photos/reg.png"  >
-                        </div>
-                  </div>
+                  
               </div>
           </div>
           <header>
@@ -367,7 +363,7 @@ let rand2;
 
 function add(){
     let wordTemp=window.getSelection().toString().trim()
-    if(
+    if(resultWords.length-selecteddWords.length>0&&
       word[rand2].includes(wordTemp)){
          selecteddWords.push(wordTemp)
         words.innerHTML=selecteddWords
