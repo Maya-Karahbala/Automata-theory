@@ -14,12 +14,13 @@
 
           <nav >
                <ul class="topnav" id="dropdownmenu">
-              <li> <a href="#"> home</a> </li>
-              <li> <a href="#"> about Regex</a> </li>
-              <li> <a href="#">rules</a></li>
-             <li> <a href="#"> examples</a> </li>
-                    <li class="topnav-right"> <a href="#"> 
-reference</a> </li>
+              <li> <a href="#"> Home</a> </li>
+              <li> <a href="#about"> About Regex</a> </li>
+              <li> <a href="#rules">Rules</a></li>
+             <li> <a href="#FindPattern"> Find Pattern</a> </li>
+            <li> <a href="#FindWords"> Find words</a> </li>
+                    <li class="topnav-right"> <a href="#Referances"> 
+References</a> </li>
 
                    <!-- 
                     Unicode Character 'TRIGRAM FOR HEAVEN' -->
@@ -54,7 +55,7 @@ reference</a> </li>
 
 
               <!-- second line-->
-               <div class="row">
+               <div class="row" id="about">
                   <div class="col-10" >
                     <div class="box">
                         <h2><span>What is Regex</span></h2>
@@ -131,8 +132,95 @@ matchAll	A String method that returns an iterator containing all of the matches,
                       </div>
                   </div>
               </div>
+                <!-- Rules-->
+                      <div class="row" id="rules">
+                  <div class="col-10" >
+                    <div class="box" >
+                        <h2><span> RegEx Rules</span></h2>
+                        <table id="mehodsTable">
+   <tr>
+    <th></th>
+    <th>Description</th>
+ 
+  </tr>
+  <tr>
+    <td> . </td>
+    <td>matches any character except line breaks. Equivalent to [^\n\r].</td>
+
+  </tr>
+  <tr>
+    <td>\w</td>
+    <td>matches any word character (alphanumeric & underscore).</td>
+   
+  </tr>
+  <tr>
+   
+    <td>\d</td>
+    <td>matches any digit character (0-9). Equivalent to [0-9].</td>
+  </tr>
+  <tr>
+    <td>\s</td>
+    <td>
+matches any whitespace character (spaces, tabs, line breaks).</td>
+   
+  </tr>
+ <tr>
+   
+    <td>[ABC]</td>
+    <td>matches any character in the set.</td>
+  </tr>
+ <tr>
+   
+    <td>[^ABC]</td>
+    <td>matches any character is not in the set.</td>
+  </tr>
+ <tr>
+   
+    <td>[A-Z]</td>
+    <td> matches a character having a character code between the two specified characters inclusive.</td>
+  </tr>
+ <tr>
+   
+    <td>[A-Z]</td>
+    <td> matches a character having a character code between the two specified characters inclusive.</td>
+  </tr>
+ <tr>
+   
+    <td>+</td>
+    <td> matches 1 or more of the preceding token.</td>
+  </tr>
+ <tr>
+   
+    <td>*</td>
+    <td> matches 0 or more of the preceding token.</td>
+  </tr>
+ <tr>
+   
+    <td>?</td>
+    <td> matches 0 or 1 of the preceding token, effectively making it optional.	</td>
+  </tr>
+ <tr>
+   
+    <td>|</td>
+    <td> acts like a boolean OR.</td>
+  </tr>
+ <tr>
+   
+    <td>[A-Z]</td>
+    <td> matches a character having a character code between the two specified characters inclusive.</td>
+  </tr>
+
+
+
+      
+</table>
+                      
+                      </div>
+                  </div>
+              </div>
+                <!-- -->
                   <!-- Find pattern-->
-               <div class="row">
+               <div class="row" id="FindPattern">
                   <div class="col-10" >
                     <div class="box">
                         <h2><span>Find pattern</span></h2>
@@ -141,8 +229,8 @@ matchAll	A String method that returns an iterator containing all of the matches,
        </p>
              Pattern <input type=text id=pat onKeyUp="checkRE()">
             <p id=testText class="HiglitedText"></p>
-            <p id=higlitedText class="HiglitedText"></p>
-            <button type="button" class="button" onclick="setValues()">Next</button>
+            Text<p id=higlitedText class="HiglitedText"></p>
+            <button type="button next" class="button" onclick="setValues()">Next</button>
 
                        
                     
@@ -152,19 +240,33 @@ matchAll	A String method that returns an iterator containing all of the matches,
                   </div>
               </div>
                  <!-- find words line-->
-               <div class="row">
+               <div class="row" id="FindWords">
                   <div class="col-10" >
                     <div class="box">
-                        <h2><span>Find matching word</span></h2>
+                        <h2><span>Find words</span></h2>
                         <p  class=explanation >
-            higlite  word which much given pattern and press add
+            higlite  word which match given pattern and press add
        </p>
             Pattern <input type=text id=pat2>
-            <p id=allText class="HiglitedText"></p>
-            <p id=words class="HiglitedText"></p>
+            <div>
+            Text <p id=allText class="HiglitedText"></p>
+                        </div>
+           
             
+           
+                   <div>      
                 <button type="button" class="button add" onclick="add()">add</button>
-            <button type="button" class="button" onclick="next2()">next</button>
+            <button type="button" class="button add" onclick="deleteWord()">delete</button>          
+                </div >
+            <div style="overflow: hidden;">
+            <p id=words class="HiglitedText" >
+                </p>
+                <p id=wordsNo class="HiglitedText"></p>
+            </div>
+            
+            
+                
+            <button type="button next" class="button" onclick="next2()">Next</button>
             
             
 
@@ -176,6 +278,19 @@ matchAll	A String method that returns an iterator containing all of the matches,
                   </div>
               </div>
           </div>
+         <!-- footer-->
+            <footer id="Referances">
+  <p>Referances: <br>
+   image <a href="https://www.mullie.eu/regular-expressions-basics/" class="ref">https://www.mullie.eu/regular-expressions-basics/ </a>  <br> 
+   w3schools <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp" class="ref">https://www.w3schools.com/jsref/jsref_obj_regexp.asp </a>
+   <br> 
+   Rules <a href="http://play.inginf.units.it/#/sheet" class="ref">http://play.inginf.units.it/#/sheet </a>
+    <br> 
+    <a href="https://emrahtema.github.io/Automata/regexp/EmrahTema_Regexp.html" class="ref">https://emrahtema.github.io/Automata/regexp/EmrahTema_Regexp.html</a>
+                
+                
+                </p>
+</footer>
          <script>
           function dropdownMenu(){
               var dropdownmenu1=document.getElementById("dropdownmenu");
@@ -186,17 +301,22 @@ matchAll	A String method that returns an iterator containing all of the matches,
                  dropdownmenu1.className="topnav" ;
               }
           }
-             const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","[A-Z][a-z]*","[1-9]*,[1-9]*"];
+             const ptrn = ["\\w","[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","[A-Z][a-z]*","[1-9]*,[1-9]*","[abc]",
+             "[1|2]","number"
+             ,'"\\w+"',"\\w+\\s", "\\w+@\\w+.com"];
             const word = 
-    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
-     "Geldim gördüm buldum...", "Excellent expression tax ","Find words starts with Capital Letter ","2,4  Find Double numbers  33  22,33 "];
+    ["find words match this pattern @","Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+     "Geldim gördüm buldum...", "Excellent expression tax ","Find words starts with Capital Letter ","2,4  Find Double numbers  33  22,33 ","letters a , b, c, ab, abc, cba rbc","numbers one, two  1, 22, 21, 2"
+    ,"number or numbers or num or n",
+     '"maya", "test  ,"" ',"match all words without the last one"
+    ,"mails :  ahmet@gmail.com normal text a@hotmail.com  "];
              let rand; 
              let selecteddRand=[]
              let selecteddWords=[]
              
 function setValues() {
          document.getElementById("pat").value="";
-    document.getElementById("pat").style.borderColor = "#0E0E0E";
+    document.getElementById("pat").style.borderColor = "#C2BBBB";
         do {
           rand=Math.floor(Math.random() * ptrn.length); 
         } while (selecteddRand.includes(rand));  
@@ -205,13 +325,14 @@ function setValues() {
         let str = "<span class=found>$&</span>";
         higlitedText.innerHTML = word[rand].replace(exp, str);
         testText.innerText=word[rand];
-        document.getElementById("testText").style.borderLeft = "thick solid #0E0E0E";
+        document.getElementById("testText").style.borderLeft = "thick solid #C2BBBB";
     
 }
 
 //check if pattern match higlited words
    let found2= document.getElementsByClassName('found2');
     let found= document.getElementsByClassName('found');
+    let found3= document.getElementsByClassName('found3');
 function chechTexts(){
  
        if(found.length==found2.length && found.length!=0){
@@ -235,37 +356,85 @@ function checkRE() {
          document.getElementById("pat").style.borderColor = "#27D704";
      }
     else{
-        document.getElementById("testText").style.borderLeft = "thick solid #0E0E0E";
-        document.getElementById("pat").style.borderColor = "#0E0E0E";
+        document.getElementById("testText").style.borderLeft = "thick solid #C2BBBB";
+        document.getElementById("pat").style.borderColor = "#C2BBBB";
     }
    
            
 }
+//second section
+let rand2;
+
 function add(){
-    let word=window.getSelection().toString()
-    if(!selecteddWords.includes(word)){
-         selecteddWords.push(word)
-        words.innerHTML=words.innerHTML+"  "+word;
-         console.log(word) 
+    let wordTemp=window.getSelection().toString().trim()
+    if(
+      word[rand2].includes(wordTemp)){
+         selecteddWords.push(wordTemp)
+        words.innerHTML=selecteddWords
+            .join(" - ");
+       
+        wordsNo.innerHTML=resultWords.length-selecteddWords.length;
+          if(chechResults()){
+          document.getElementById("words").style.borderColor = "#27D704";  
+        }
+        else{
+          document.getElementById("words").style.borderColor = "#C2BBBB";    
+        }
     }
   
 }
+let resultWords;
 function next2(){
+    document.getElementById("words").style.borderColor = "#C2BBBB";
         selecteddWords=[];
+    words.innerHTML=""
         do {
-          rand=Math.floor(Math.random() * ptrn.length); 
-        } while (selecteddRand.includes(rand));  
-        selecteddRand.push(rand)
+          rand2=Math.floor(Math.random() * ptrn.length); 
+        } while (selecteddRand.includes(rand2));  
+        selecteddRand.push(rand2)
        
-        let exp = new RegExp(ptrn[rand],'g');
-        pat2.value=ptrn[rand];
+        let exp = new RegExp(ptrn[rand2],'g');
+        pat2.value=ptrn[rand2];
         
-        allText.innerText=word[rand];
+        allText.innerText=word[rand2];
+        resultWords=word[rand2].match(exp)
+        wordsNo.innerHTML=resultWords.length-selecteddWords.length;
 
+}
+function deleteWord(){
+     let wordTemp=window.getSelection().toString().trim()
+     console.log(wordTemp)
+    if(selecteddWords.includes(wordTemp)){
+         selecteddWords.splice( selecteddWords.indexOf(wordTemp), 1 );
+        words.innerHTML=selecteddWords
+            .join(" - "); 
+        wordsNo.innerHTML=resultWords.length-selecteddWords.length;
+        if(chechResults()){
+          document.getElementById("words").style.borderColor = "#27D704";  
+        }
+        else{
+          document.getElementById("words").style.borderColor = "#C2BBBB";    
+        }
+    
+}
+}
+
+function chechResults(){
+  if(selecteddWords.length==resultWords.length&&selecteddWords.length!=0) {
+      for(w of selecteddWords){
+       if(!resultWords.includes(w))
+          return false
+
+  } 
+    return true;
+      }
+    
+  return false;
 }
              setValues();
              next2();
              document.getElementById("pat2").readOnly = true;
+              document.getElementById("allText").style.borderColor = "#C2BBBB";
              
              
           </script>
