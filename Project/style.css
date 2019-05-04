@@ -352,10 +352,11 @@ div.rightsidecol{
     margin-left: 0;
 }
     h1.large{
-
+    text-align: left;
     font-size: 40px;
     }
     h1.med{
+    text-align: left;
     font-size: 20px;
     margin-left: 70px;
     
