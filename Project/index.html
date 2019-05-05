@@ -277,7 +277,6 @@ matches any whitespace character (spaces, tabs, line breaks).</td>
          <!-- footer-->
             <footer id="Referances">
   <p>Referances: <br>
-   image <a href="https://www.mullie.eu/regular-expressions-basics/" class="ref">https://www.mullie.eu/regular-expressions-basics/ </a>  <br> 
    w3schools <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp" class="ref">https://www.w3schools.com/jsref/jsref_obj_regexp.asp </a>
    <br> 
    Rules <a href="http://play.inginf.units.it/#/sheet" class="ref">http://play.inginf.units.it/#/sheet </a>
@@ -328,7 +327,7 @@ function setValues() {
 //check if pattern match higlited words
    let found2= document.getElementsByClassName('found2');
     let found= document.getElementsByClassName('found');
-    let found3= document.getElementsByClassName('found3');
+  
 function chechTexts(){
  
        if(found.length==found2.length && found.length!=0){
@@ -360,16 +359,20 @@ function checkRE() {
 }
 //second section
 let rand2;
+let ResultWordsLength
 
 function add(){
-    let wordTemp=window.getSelection().toString().trim()
+    let wordTemp=window.getSelection().toString()
     if(resultWords.length-selecteddWords.length>0&&
       word[rand2].includes(wordTemp)){
+        //
+         //resultWords.splice( //resultWords.indexOf(wordTemp), 1 );
+        //
          selecteddWords.push(wordTemp)
         words.innerHTML=selecteddWords
             .join(" - ");
        
-        wordsNo.innerHTML=resultWords.length-selecteddWords.length;
+        wordsNo.innerHTML=ResultWordsLength-selecteddWords.length;
           if(chechResults()){
           document.getElementById("words").style.borderColor = "#27D704";  
         }
@@ -394,17 +397,19 @@ function next2(){
         
         allText.innerText=word[rand2];
         resultWords=word[rand2].match(exp)
-        wordsNo.innerHTML=resultWords.length-selecteddWords.length;
+        ResultWordsLength=resultWords.length
+        wordsNo.innerHTML=ResultWordsLength-selecteddWords.length;
 
 }
 function deleteWord(){
-     let wordTemp=window.getSelection().toString().trim()
+     let wordTemp=window.getSelection().toString()
      console.log(wordTemp)
     if(selecteddWords.includes(wordTemp)){
          selecteddWords.splice( selecteddWords.indexOf(wordTemp), 1 );
+        //resultWords.push(wordTemp);
         words.innerHTML=selecteddWords
             .join(" - "); 
-        wordsNo.innerHTML=resultWords.length-selecteddWords.length;
+        wordsNo.innerHTML=ResultWordsLength-selecteddWords.length;
         if(chechResults()){
           document.getElementById("words").style.borderColor = "#27D704";  
         }
@@ -414,12 +419,17 @@ function deleteWord(){
     
 }
 }
-
+let temp
 function chechResults(){
+    
   if(selecteddWords.length==resultWords.length&&selecteddWords.length!=0) {
+       temp=Array.from(resultWords);
       for(w of selecteddWords){
-       if(!resultWords.includes(w))
+       if(!temp.includes(w))
           return false
+       else {
+           temp.splice( temp.indexOf(w), 1 );
+       }
 
   } 
     return true;
