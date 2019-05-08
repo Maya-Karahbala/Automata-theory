@@ -220,6 +220,7 @@ p.HiglitedText {
 }
 .found { color: #27D704; }
 .found2 { color: #27D704; }
+.found3 { color: #27D704; }
 .next {
      margin-left: 80%;
 }
@@ -284,6 +285,8 @@ footer {
   background-color: #033741;
   color: white;
  padding: 2%;
+ word-wrap: break-word;
+ margin-right: 10px;
   
 }
 .ref{
@@ -354,7 +357,11 @@ div.rightsidecol{
     h1.large{
     text-align: left;
     font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: auto;
+
     }
+
     h1.med{
     text-align: left;
     font-size: 20px;
@@ -363,8 +370,11 @@ div.rightsidecol{
 }
     #words{
    height: auto;
-        width: 100%;
+   width: 65%; 
+   min-height:25px; 
+   margin-right: 5px;
 }
+
  
  
    

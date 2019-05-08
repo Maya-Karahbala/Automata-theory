@@ -215,13 +215,30 @@ matches any whitespace character (spaces, tabs, line breaks).</td>
                   </div>
               </div>
                 <!-- -->
+                  <!-- Test  your patter-->
+               <div class="row" >
+                  <div class="col-10" >
+                    <div class="box">
+                        <h2><span>Test pattern</span></h2>
+            
+            Pattern <input type=text id=patt onKeyUp="checkRETest()" >
+            
+            Text <input type=text id=yourText onKeyUp="checkRETest()" >
+
+                         
+           <p id=out></p>
+
+                      </div>
+                  </div>
+              </div>
+          
                   <!-- Find pattern-->
                <div class="row" id="FindPattern">
                   <div class="col-10" >
                     <div class="box">
                         <h2><span>Find pattern</span></h2>
                         <p  class=explanation >
-           Your pattern should match the higlited words in text section
+           Your pattern should match the highlighted words in the text section
        </p>
              Pattern <input type=text id=pat onKeyUp="checkRE()">
             <p id=testText class="HiglitedText"></p>
@@ -235,13 +252,15 @@ matches any whitespace character (spaces, tabs, line breaks).</td>
                       </div>
                   </div>
               </div>
+  
+
                  <!-- find words line-->
                <div class="row" id="FindWords">
                   <div class="col-10" >
                     <div class="box">
                         <h2><span>Find words</span></h2>
                         <p  class=explanation >
-            higlite  word which match given pattern and press add
+            Highlight word which matches given pattern and press add
        </p>
             Pattern <input type=text id=pat2>
             <div>
@@ -259,20 +278,13 @@ matches any whitespace character (spaces, tabs, line breaks).</td>
                 </p>
                 <p id=wordsNo class="HiglitedText"></p>
             </div>
-            
-            
-                
+ 
             <button type="button next" class="button" onclick="next2()">Next</button>
-            
-            
-
-                       
-                    
-                       
-                     
+   
                       </div>
                   </div>
               </div>
+          </div>
           </div>
          <!-- footer-->
             <footer id="Referances">
@@ -437,7 +449,21 @@ function chechResults(){
     
   return false;
 }
+//test patter fuctios
+function setValuesTest() {
+    patt.value = ptrn[0];
+    yourText.value =word[0]
+    checkRETest();
+}
+function checkRETest() {
+    if (patt.value && yourText.value) {
+        const exp = new RegExp(patt.value,'g');
+        const str = "<span class=found3>$&</span>";
+        out.innerHTML = yourText.value.replace(exp, str);
+    }
+}
              setValues();
+             setValuesTest() ;
              next2();
              document.getElementById("pat2").readOnly = true;
               document.getElementById("allText").style.borderColor = "#C2BBBB";
