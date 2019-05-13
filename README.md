@@ -18,14 +18,14 @@
      <ul>
 <li>HW1 <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW1.html"> Regular Expressions</a></li>
    <li>HW2 <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW2/Expression.html"> adding MOD(%)and make Math's methods usable by name</a></li>
-      <li>HW3 <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW3/microJ1.html">HW3</a></li>
+      <li>HW3 <a href="https://maya-karahbala.github.io/Automata-theory/Homeworks/HW3/microJ1.html"> MicroJ</a></li>
 
 
       
   </ul> 
   <h2><li > Project</li></h2>
    <ul>
-<li> <a href="https://maya-karahbala.github.io/Automata-theory/Project/index.html">Regex</a></li>
+<li> <a href="https://maya-karahbala.github.io/Automata-theory/Project/index.html"> Regular Expressions</a></li>
      
   </ul> 
 
