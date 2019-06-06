@@ -1,0 +1,41 @@
+<!-- navbar-->
+<div>
+<nav>
+        <ul class="topnav" id="dropdownmenu">
+            <li> <a href="/home"> Home</a> </li>
+			
+            <li> <a href="/test-pattern">Test Pattern</a></li>
+            <li> <a href="/find-pattern"> Find Pattern</a> </li>
+            
+            <li class="topnav-right"> <a href="#Referances">References</a> </li>
+            <li class="dropdownicon"> <a href="javascript:void(0);" onclick="dropdownMenu()"> &#9776;</a> </li>
+
+        </ul>
+</nav>
+</div>
+
+{{outlet}}
+
+<!-- footer-->
+<footer id="Referances">
+    <p>Referances:
+        <br> w3schools <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp" class="ref">https://www.w3schools.com/jsref/jsref_obj_regexp.asp </a>
+        <br> Rules <a href="http://play.inginf.units.it/#/sheet" class="ref">http://play.inginf.units.it/#/sheet </a>
+        <br>
+        <a href="https://emrahtema.github.io/Automata/regexp/EmrahTema_Regexp.html" class="ref">https://emrahtema.github.io/Automata/regexp/EmrahTema_Regexp.html</a>
+
+    </p>
+</footer>
+
+
+<script>
+	function dropdownMenu() {
+                var dropdownmenu1 = document.getElementById("dropdownmenu");
+                if (dropdownmenu1.className === "topnav") {
+                    dropdownmenu1.className += " responsive";
+                } else {
+                    dropdownmenu1.className = "topnav";
+                }
+            }
+
+</script>

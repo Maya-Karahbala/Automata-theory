@@ -1,0 +1,416 @@
+/*defaults*/
+header, nav, footer{
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+html , body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    line-height: 1;
+    margin: 0;
+    overflow-x: hidden;
+
+    
+}
+.container{
+    width: 100%;
+    /*split u counted margin */
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+     
+}
+p{
+    font-size: 20px;
+    line-height: 1.2;
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display: table;
+    clear: both;
+    content: "";
+     margin 0;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/*navbar*/
+nav{
+    width: 100%;
+    margin: 0;
+   
+}
+nav ul {
+    background-color:#00262d;
+    overflow: hidden;
+    /*background-color nor shown without setting overflow*/
+    padding: 0;
+    margin: 0;
+}
+
+ul.topnav li{
+    list-style: none;
+    float: left;
+}
+ul.topnav li :hover{
+   background-color: #FFFFFF;
+    color: black; 
+}
+ul.topnav li.topnav-right{
+    float: right;
+}
+ul.topnav li a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    min-height: 16px;
+    padding: 18px;
+    text-align: center;
+    color: #FFFFFF;
+	letter-spacing: 1.5px;
+}
+ul.topnav li.dropdownicon{
+    display: none;
+}
+
+/*********custom*********/
+#gradient{
+ background-image: linear-gradient(  #00060A,#033741);   
+ margin-bottom: 5%;
+}
+h2 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.2em;
+   margin: 30px 0 20px; 
+    color: #033741;
+   
+} 
+
+h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+h1.large{
+    color: #fff;
+    font-size: 70px;
+    margin-bottom: 20px;
+    height: 90px;
+    margin-left: 0;
+    padding-right: 0;
+    text-align: center;
+    
+}
+h1.med{
+    font-size: 30px;
+    margin-left: 170px;
+    margin-top: 0;
+}
+
+form h2{
+    color: #fff;
+}
+div.leftsidecol{
+   width: 50%;
+    margin-left: 20%;
+}
+div.rightsidecol{
+  margin-left: 0%;
+}
+
+/*section 2*/
+.section2Header{
+  text-align: center;  
+}
+div.box {
+	margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,.15);
+    padding: 8px;
+    margin-right: 20px;
+     margin-left: 20px;
+     margin-bottom: 40px;
+    height:auto;
+    
+}
+div.box2 {
+	margin-top: 5%;
+    background-color: #fff;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,.15);
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+   
+    
+}
+
+.text{
+     margin-left: 20px;
+}
+diV.col-4{
+    padding: 5px;
+    
+    
+}
+    
+}
+
+ div.photoContainer {
+  
+     max-width: 50%;
+    height: 500px
+}
+.col-10{
+    margin-left: 10%;
+}
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+  margin-left: 40px;
+}
+
+
+/*method table*/
+#mehodsTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom:1%;
+}
+
+#mehodsTable td, #mehodsTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#mehodsTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#mehodsTable tr:hover {background-color: #ddd;}
+
+#mehodsTable th  {
+  padding: 12px;
+ 
+  text-align: left;
+  background-color: #00262d;
+  color: white;
+}
+
+/*-----*/
+/*Regeex game*/
+input[type="text"]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+    border: 2px solid #C2BBBB;
+  box-sizing: border-box;
+}
+ #yourText {
+      width: 100%;
+      height: 200px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      resize: none;
+  }
+p.HiglitedText {
+    border: 2px solid #C2BBBB;
+    border-left: 5px solid #27D704;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.found { color: #27D704; }
+.found2 { color: #27D704; }
+.found3 { color: #27D704; }
+
+.next {
+     margin-left: 80%;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+   display: inline; 
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+ 
+  
+border: 2px solid #4CAF50;
+}
+.button:hover {
+  background-color: #0B7813; /* Green */
+ 
+}
+/*-----*/
+/*fınd  words*/
+.add{
+  background-color: #1B1D62; 
+  border: 2px solid #1B1D62;
+
+   
+
+ 
+    
+}
+.add:hover {
+  background-color: #0E1043; /* Green */
+ 
+}
+#words {
+    width: 89%;
+    float: left;
+    margin-right: 0;
+    height: 24px;
+}
+#wordsNo {
+    width: 2%;
+     float: right;
+    margin-left: 0;
+    border: 2px solid #C2BBBB;
+   
+   
+  
+}
+
+
+/*footer-*/
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #033741;
+  color: white;
+ padding: 2%;
+ word-wrap: break-word;
+ margin-right: 10px;
+  
+}
+.ref{
+    color: aliceblue;
+}
+/*-----*/
+.notFound{
+	margin-bottom: 70%;
+	margin-left: 10%;
+	font-size: 50px;
+}
+.space{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+/*mobile*/
+
+@media screen and (max-width: 600px) {
+ul.topnav li:not(:nth-child(1)){
+        display: none;
+    }
+ul.topnav li.dropdownicon{
+display: block;
+float: right;
+    }
+
+ul.topnav.responsive
+li.dropdownicon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+ul.topnav.responsive {
+   position: relative;
+    /*silebiliriz*/
+}
+ul.topnav.responsive li{
+ display: inline;
+ float: none;
+}
+topnav.responsive li a{
+    /*silebiliriz*/
+   display: block;   
+    text-align: left;
+     display: block;
+}
+
+div.leftsidecol,
+div.rightsidecol{
+    margin-left: 1%;
+}
+.col-6, .col-4{
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 10%;
+    padding: 8px;
+}
+
+    div.photoContainer {
+
+        margin 5px;;
+        overflow: hidden;
+        
+    } 
+    div.box{
+    height:auto;
+    margin-left: 0;
+    margin-right: 0;
+    
+}
+    .row{
+    margin-left: 0;
+    }
+    pre code {
+    margin-left: 0;
+}
+    h1.large{
+    text-align: left;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: auto;
+
+    }
+
+    h1.med{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 70px;
+    
+}
+    #words{
+   height: auto;
+   width: 65%; 
+   min-height:25px; 
+   margin-right: 5px;
+}
+
+ 
+ 
+   
+    
+}

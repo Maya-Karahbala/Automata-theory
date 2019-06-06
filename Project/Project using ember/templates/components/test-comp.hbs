@@ -1,0 +1,22 @@
+<div class="row" id="FindPattern">
+    <div class="col-10">
+		
+        <div class="box2">
+<h2><span>Test pattern</span></h2>
+            
+            Pattern <input
+            {{action "check" on="keyUp"}}
+             type=text id=patt value={{pattern}}>
+           
+            Text <textarea 
+            {{action "check" on="keyUp"}}
+            id=yourText>
+
+     {{text}}
+    </textarea>
+  <pre id=out></pre>
+   
+		</div>
+    </div>
+</div>
+ 

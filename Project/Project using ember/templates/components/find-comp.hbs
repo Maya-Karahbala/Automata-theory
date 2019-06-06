@@ -1,0 +1,20 @@
+    <div class="row" id="FindPattern">
+                <div class="col-10">
+                    <div class="box2">
+                        <h2><span>Find pattern</span></h2>
+                        <p class=explanation>
+                            Your pattern should match the highlighted words in the text section
+                        </p>
+                        Pattern
+                        <input   
+					    {{action "checkRE" on="keyUp"}} 
+						type=text id="pat">
+                        <p id=testText class="HiglitedText"></p>
+                        Text
+                        <p id=higlitedText class="HiglitedText"></p>
+                        <button {{action "ex"}}
+								type="button next" class="button" >Next</button>
+
+                    </div>
+                </div>
+            </div>

@@ -291,8 +291,6 @@ var re = new RegExp('ab+c');  </code></pre>
                     dropdownmenu1.className = "topnav";
                 }
             }
-            const pp="number";
-            const tt="number in my phone";
             const ptrn = ["\\w", "[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]", "[A-Z][a-z]*", "[1-9]*,[1-9]*", "[abc]",
                 "[1|2]", "number", '"\\w+"', "\\w+\\s", "\\w+@\\w+.com"
             ];
@@ -433,7 +431,8 @@ var re = new RegExp('ab+c');  </code></pre>
             function setValuesTest() {
                 patt.value = "\\d,*\\d";
                 
-               yourText.value =  `We have to extract these numbers 12, 47, 48
+               yourText.value =  
+`We have to extract these numbers 12, 47, 48
 The integers numbers are also interesting: 18 2036 31
 "," is a separator, so please extract these numbers 125,789,1450 and also these 
 564,90456
